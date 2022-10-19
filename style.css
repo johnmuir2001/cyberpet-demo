@@ -1,0 +1,134 @@
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+#initialModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    place-items: center;
+}
+
+#initialModal div {
+    background-color: white;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+#initialModal div h1 {
+    margin: 0 0 20px 0;
+}
+
+#initialModal div p {
+    margin: 10px 0 0 0;
+    height: 0px;
+    color: red;
+}
+
+#petWrapper {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+#petName, #petType {
+    margin: 0;
+    text-align: center;
+}
+
+label {
+    text-transform: capitalize;
+}
+
+#statWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+}
+#statWrapper div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#image {
+    background-size: 460px 920px;
+    background-position: 0 0;
+    height: 230px;
+    width: 230px;
+    animation: happy 1s infinite steps(2);
+}
+
+#petMsg {
+    text-align: center;
+}
+
+@keyframes idle {
+    from {
+        background-position: 0 0px;
+    } 
+    to {
+        background-position: 460px 0px;
+    }
+}
+
+@keyframes happy {
+    from {
+        background-position: 0 -230px;
+    } 
+    to {
+        background-position: 460px -230px;
+    }
+}
+
+@keyframes sad {
+    from {
+        background-position: 0 460px;
+    } 
+    to {
+        background-position: 460px 460px;
+    }
+}
+
+@keyframes dead {
+    from {
+        background-position: 0 230px;
+    } 
+    to {
+        background-position: 0 230px;
+    }
+}
+
+#restartScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: white;
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(91, 91, 91);
+    transition: height 0.5s;
+}
+#restartScreen h2 {
+    margin: 0 0 20px 0;
+}

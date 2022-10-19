@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>CyberPet</title>
+</head>
+<body>
+    <div id="petWrapper">
+        <h1 id="petName"></h1>
+        <h4 id="petType"></h4>
+
+        <div id="statWrapper"></div>
+        <div id="buttonWrapper"></div>
+
+        <div id="image"></div>
+        <p id="petMsg"></p>
+    </div>
+
+    <div id="restartScreen">
+        <h2>Unlucky! You're pet died</h2>
+        <p id="lifeSpan"></p>
+        <button id="restartBtn">Play again?</button>
+    </div>
+
+    <div id="initialModal">
+        <div>
+            <h1>Make a cyber pet!</h1>
+
+            <input type="radio" id="animalOption1" class="choice" name="choice" value="dog">
+            <label for="animalOption1">Dog</label><br>
+            <input type="radio" id="animalOption2" class="choice" name="choice" value="cat">
+            <label for="animalOption2">Cat</label><br><br>  
+    
+            <label for="name">Name:</label>
+            <input id="name" type="text"><br><br> 
+
+            <button id="submitBtn">Make Pet</button>
+            <p></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
